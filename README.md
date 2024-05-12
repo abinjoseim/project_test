@@ -22,3 +22,7 @@ Note: Frontend application is communicating with backend executing in your local
 
 - Run `npm run build`
 - Build files will be available in `project_directory/dist`
+
+<br />
+
+Answers for all task 1, 2 and other additional details of task 3 is available in `Notes.md` file

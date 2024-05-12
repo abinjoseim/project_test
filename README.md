@@ -15,6 +15,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - open cloned directory and run `cd project_test`
 - `npm install`
 - `npm run start`
+-  open browser and load `localhost:4200`
 
 Note: Frontend application is communicating with backend executing in your local machine. Please make sure your api is available at `localhost:3001/api`
 

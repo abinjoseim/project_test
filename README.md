@@ -11,7 +11,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Run Application
 
-- Run `https://github.com/abinjoseim/project_test.git` in your terminal
+- Run `git clone https://github.com/abinjoseim/project_test.git` in your terminal assuming git is installed.
 - open cloned directory and run `cd project_test`
 - `npm install`
 - `npm run start`

@@ -1,4 +1,43 @@
-## Task 3
+## Task 1
+
+### Notes on current state of Database
+
+- All Tables have primary key with data type character varying.
+- Implemented indexing for the primary key column.
+- Booking table doesn't have any foreign keys which relates to Parc and Users table. Without this data booking table doesn't make any sense.
+- There is no relation between dumped data in table which make it difficult to run join query to get required data.
+- Character varying data type is used everywhere without using appropriate data types based on value holding it.
+- As there is no foreign key, foreign key indexing is not added.
+- NOT NULL constraint is used to ensure field is not empty.
+
+<br />
+
+### Ways to improve Database
+
+- When selecting primary keys, prioritize narrower data types to minimize storage requirements and enhance query performance, particularly in indexed columns.
+- Consider using data types like SERIAL, BIGSERIAL or UUID data type for primary key. Using integer value will improve indexing.
+- Introduce foreign keys in the booking table to establish associations with the User and Parc tables, thereby ensuring data integrity and enhancing overall data quality.
+- Provide indexing for Foreign keys especially if it is frequently used in join query operations to speedup lookup process. Indexing frequently used fields will help improve query performance.
+- Consider providing actions like ON UPDATE and ON DELETE clauses for foreign keys to maintain data integrity.
+- Consider using correct data type for fields.For example, comments field in booking table can hold long comments, so we can USE TEXT data type.
+- Incorporating a DEFAULT value constraint can ensure that non-null fields have a predetermined default value assigned to them.
+- Postgres supports point-in-time-recovery(PITR), which will help recover database in a spcific point of time before an issue happens. Configure this to handle database recovery.
+- Try using various tools to monitor database activities like performance, resource utilisation and backup status.
+
+  
+<br />
+<br />
+<br />
+
+## Task 2
+
+
+<br />
+<br />
+<br />
+
+
+## Task 3 - [Frontend role]
 
 ### Project details
 

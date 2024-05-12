@@ -21,3 +21,4 @@ Note: Frontend application is communicating with backend executing in your local
 ## Build Appplication
 
 - Run `npm run build`
+- Build files will be available in `project_directory/dist`

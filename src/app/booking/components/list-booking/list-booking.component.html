@@ -1,0 +1,85 @@
+<div class="mt-4 container mx-auto min-h-full">
+     <section class="px-3">
+        <div class="bg-white p-4 my-4 rounded-md shadow-md border border-[#e0e0e3]">
+           <div class="flex">
+                <img src="./assets/icons/bars.svg" alt="profile" class="w-7 mr-4">
+                <p class="text-xl font-normal text-[#5d596c]">Bookings</p>
+           </div>
+        </div>
+        <div class="py-4 flex justify-between items-center">
+           <div class="grid">
+              <h1 class="text-[#5d596c] text-xl font-bold p-1">Your Bookins List</h1>
+              <p class="text-[#5d596c] text-sm font-light px-1">List of all bookings done</p>
+           </div>
+           <button (click)="openCreateBookingModal()" class="bg-[#6258cc] p-2 hover:ring-2 hover:ring-offset-2 hover:ring-[#9f98ee] text-white rounded-md shadow-md text-sm">New booking</button>
+        </div>
+        
+        <!-- Table list & pagination -->
+        <div class="overflow-x-auto bg-white shadow-md rounded-t-lg mt-2">
+            <div class="relative">
+                 <table class="mx-auto w-full table">
+                    <thead>
+                       <tr class="bg-gray-200 text-gray-600 text-sm leading-normal">
+                          <th class="table__head cursor-pointer">
+                             <div>Id</div>
+                          </th>
+                          <th class="table__head cursor-pointer">
+                             <div>User</div>
+                          </th>
+                          <th class="table__head cursor-pointer">
+                             <div>Booking Date</div>
+                          </th>
+                          <th></th>
+                       </tr>
+                    </thead>
+                    <tbody class="relative">
+                      <!-- row used to display if any field doesn't have any value -->
+                       <ng-template #blankColumn>
+                          <div class="blank-row">-</div>
+                       </ng-template>
+                       <ng-container *ngIf="bookings.length > 0">
+                          <ng-container *ngFor="let booking of bookings">
+                             <tr class="border-b border-gray-200 hover:bg-gray-100 divide-x">
+                                <td class="table__cell">
+                                   <div class="whitespace-nowrap">{{booking.id}}</div>
+                                </td>
+                                <td class="table__cell">
+                                   <div class=" whitespace-nowrap">{{booking.user}}</div>
+                                </td>
+                                <td class="table__cell">
+                                     <!-- Angular in built pipe is used to transform date string -->
+                                   <div class=" whitespace-nowrap">{{booking.bookingdate | date: 'medium'}}</div>
+                                </td>
+        
+                                <td class="">
+                                   <div class="flex">
+                                      <span class="table__actions inline-flex">
+                                         <img width="35" class="cursor-pointer p-2 hover:bg-gray-300"
+                                         src="assets/icons/eye.svg" alt="view" [routerLink]="[booking.id]">
+                                         <img width="35" class="cursor-pointer p-2 hover:bg-gray-300"
+                                         src="assets/icons/delete_icon.svg" alt="delete" (click)="deleteBooking(booking.id)">
+                                      </span>
+                                   </div>
+                                </td>
+                             </tr>
+                          </ng-container>
+                       </ng-container>
+                       <tr *ngIf="bookings.length == 0 && !loadingStates['load_results']">
+                            <td colspan="11" class="px-6 py-4 text-center">No Data found !</td>
+                       </tr>
+                       <ng-container *ngIf="loadingStates['load_results']">
+                           <!-- app-skeleton is reusable skeleton loader for tables -->
+                            <tr class="divide-x border-b last:border-b-0 hover:bg-gray-100"
+                                *ngFor="let row of createArray(3)" app-skeleton [noOfColumns]="3">
+                           </tr>
+                       </ng-container>
+                    </tbody>
+                 </table>
+            </div>
+            <p class="p-2 w-full text-start" *ngIf="!loadingStates['load_results'] && bookings.length > 0">Total of {{bookings.length}} bookings</p>
+        </div>
+        <!-- <div class="relative bg-white shadow-md rounded-b-lg">
+            pagination goes here
+        </div> -->
+     </section>
+  </div>

@@ -1,0 +1,67 @@
+<div class="mt-4 container mx-auto min-h-full">
+     <section class="px-3">
+        <div class="bg-white p-4 my-4 rounded-md shadow-md border border-[#e0e0e3]">
+           <div class="flex">
+                <img src="./assets/icons/bars.svg" alt="profile" class="w-7 mr-4">
+                <p class="text-xl font-normal text-[#5d596c]">Parc</p>
+           </div>
+        </div>
+        <div class="py-4 flex justify-between items-center">
+           <div class="grid">
+              <h1 class="text-[#5d596c] text-xl font-bold p-1">Your parc List</h1>
+              <p class="text-[#5d596c] text-sm font-light px-1">List of all available parc</p>
+           </div>
+        </div>
+        
+        <!-- Table list & pagination -->
+        <div class="overflow-x-auto bg-white shadow-md rounded-t-lg mt-2">
+            <div class="relative">
+                 <table class="mx-auto w-full table">
+                    <thead>
+                       <tr class="bg-gray-200 text-gray-600 text-sm leading-normal">
+                          <th class="table__head cursor-pointer">
+                             <div>Id</div>
+                          </th>
+                          <th class="table__head cursor-pointer">
+                             <div>Name</div>
+                          </th>
+                          <th class="table__head cursor-pointer">
+                             <div>Description</div>
+                          </th>
+                          
+                       </tr>
+                    </thead>
+                    <tbody class="relative">
+                       <ng-template #blankColumn>
+                          <div class="blank-row">-</div>
+                       </ng-template>
+                       <ng-container *ngIf="parcs.length > 0">
+                          <ng-container *ngFor="let parc of parcs">
+                             <tr class="border-b border-gray-200 hover:bg-gray-100 divide-x">
+                                <td class="table__cell">
+                                   <div class="whitespace-nowrap">{{parc.id}}</div>
+                                </td>
+                                <td class="table__cell">
+                                   <div class=" whitespace-nowrap">{{parc.name}}</div>
+                                </td>
+                                <td class="table__cell">
+                                   <div class=" whitespace-nowrap">{{parc.description}}</div>
+                                </td>
+                             </tr>
+                          </ng-container>
+                       </ng-container>
+                       <tr *ngIf="parcs.length == 0 && !loadingStates['load_results']">
+                            <td colspan="11" class="px-6 py-4 text-center">No Data found !</td>
+                       </tr>
+                       <ng-container *ngIf="loadingStates['load_results']">
+                            <tr class="divide-x border-b last:border-b-0 hover:bg-gray-100"
+                                *ngFor="let row of createArray(3)" app-skeleton [noOfColumns]="3">
+                           </tr>
+                       </ng-container>
+                    </tbody>
+                 </table>
+            </div>
+            <p class="p-2 w-full text-start" *ngIf="!loadingStates['load_results'] && parcs.length > 0">Total of {{parcs.length}} parcs</p>
+        </div>
+     </section>
+  </div>

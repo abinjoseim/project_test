@@ -1,0 +1,41 @@
+@tailwind components;
+
+@layer components {
+
+    .table {
+    
+        &__head {
+            @apply px-6 py-4 font-medium text-gray-900;
+
+            &__sort {
+                width: 10px; 
+                margin-left: 8px;
+            }
+
+            div {
+                @apply flex items-center justify-center;
+            }
+        }
+
+        tbody {
+            @apply text-gray-600 text-sm font-light;
+
+            .blank-row {
+                @apply flex justify-center gap-4 py-1
+            }
+        }
+
+        &__cell {
+            @apply py-2 px-6;
+
+            div {
+                @apply flex items-center justify-center;
+            }
+        }
+
+        &__actions {
+            width: 70px;
+            margin-left: auto;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+     "API_ENDPOINTS": {
+          "BOOKINGS": "/1/bookings",
+          "GET_BOOKING":"/1/bookings/:id",
+          "USERS":"/1/users",
+          "PARC":"/1/parcs"
+     }
+}

@@ -1,0 +1,60 @@
+<div class="mt-4 container mx-auto min-h-full">
+     <section class="px-3">
+        <div class="bg-white p-4 my-4 rounded-md shadow-md border border-[#e0e0e3]">
+           <div class="flex">
+                <img src="assets/icons/arrow.svg" alt="back_arrow" class="w-4 mr-4 cursor-pointer" [routerLink]="['/']">
+                <p class="text-xl font-normal text-[#5d596c]">Bookings Details</p>
+           </div>
+        </div>
+        <div class="py-4 flex justify-between items-center">
+           <div class="grid">
+              <h1 class="text-[#5d596c] text-xl font-bold p-1">Your Booking Details</h1>
+              <p class="text-[#5d596c] text-sm font-light px-1">Detailed view of your booking</p>
+           </div>
+        </div>
+
+        <div class="m-4 mx-auto rounded-xl bg-white p-4">
+          <div class="flex flex-col gap-2">
+               <div class="px-4 sm:p-0">
+                    <ng-template #blankColumn>
+                         ----
+                    </ng-template>
+                    <dl class="sm:divide-y sm:divide-gray-200">
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                User
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" *ngIf="booking.user;else blankColumn;">
+                                {{booking.user}}
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                               Parc
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" *ngIf="booking.parc;else blankColumn;">
+                               {{booking.parc}}
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                               Booking Date
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" *ngIf="booking.bookingdate;else blankColumn;">
+                                {{booking.bookingdate | date:'medium'}}
+                            </dd>
+                        </div>
+                        <div class="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                            <dt class="text-sm font-medium text-gray-500">
+                                Comments
+                            </dt>
+                            <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2" *ngIf="booking.comments;else blankColumn;">
+                                {{booking.comments}}
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+          </div>
+        </div>
+     </section>
+  </div>

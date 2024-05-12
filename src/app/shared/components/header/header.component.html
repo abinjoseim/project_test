@@ -1,0 +1,48 @@
+<nav class="border-b-2 border-gray-300 ring-red bg-white">
+     <div class="mx-auto container px-2 sm:px-6 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between">
+               <div class="flex flex-1 items-center justify-between sm:items-stretch">
+                    <div class="flex flex-shrink-0 items-center">
+                        <img class="block h-8 w-auto" src="assets/icons/logo.svg" alt="logo" srcset="">
+                    </div>
+    
+                    <button  (click)="mobile_menu.classList.toggle('hidden')" type="button"
+                        class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-400 focus:bg-white"
+                        id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                             stroke-width="1.5" stroke="currentColor" >
+                             <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                   </button>
+                    
+                    <div class="hidden md:ml-6 md:block">
+                         <div class="flex space-x-4 uppercase text-sm font-medium">
+                              <a [routerLink]="['/bookings']"class="navbar px-3 py-2  hover:rounded-md hover:cursor-pointer" 
+                              [ngClass]="checkRouter('/bookings')?'bg-[#82be21] text-white rounded-md':'hover:bg-[#f4f4f5]'"
+                                   aria-current="page">Bookings</a>
+    
+                              <a [routerLink]="['/users']" class="px-3 py-2 hover:rounded-md hover:cursor-pointer"
+                              [ngClass]="checkRouter('/users')?'bg-[#82be21] text-white rounded-md':'hover:bg-[#f4f4f5]'"
+                                   aria-current="page">Users</a>
+    
+                              <a [routerLink]="['/parc']" class="px-3 py-2 hover:rounded-md hover:cursor-pointer" [ngClass]="checkRouter('/parc')?'bg-[#82be21] text-white rounded-md':'hover:bg-[#f4f4f5]'"
+                                   aria-current="page">Parc</a>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+    
+     <!-- Mobile menu, show/hide based on menu state. -->
+     <div #mobile_menu class="hidden bg-white" id="mobile-menu">
+          <div class="space-y-1 px-2 pt-2 pb-3 uppercase text-xs font-medium">
+               <a [routerLink]="['/bookings']" class="block px-3 py-2 hover:rounded-md hover:cursor-pointer"  [ngClass]="checkRouter('/bookings')?'bg-[#82be21] text-white rounded-md':'hover:bg-[#f4f4f5]'">Bookings</a>
+    
+               <a [routerLink]="['/users']" class="block px-3 py-2 hover:rounded-md hover:cursor-pointer"  [ngClass]="checkRouter('/users')?'bg-[#82be21] text-white rounded-md':'hover:bg-[#f4f4f5]'">Users</a>
+    
+               <a [routerLink]="['/parc']" class="block px-3 py-2 hover:rounded-md hover:cursor-pointer" [ngClass]="checkRouter('/parc')?'bg-[#82be21] text-white rounded-md':'hover:bg-[#f4f4f5]'">Parc</a>
+          </div>
+     </div>
+    </nav>

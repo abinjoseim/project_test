@@ -16,7 +16,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - `npm install`
 - `npm run start`
 
-Note: Frontend application is communicating with backend executing in your local machine. Please make sure your api is available at `localhost:3001`
+Note: Frontend application is communicating with backend executing in your local machine. Please make sure your api is available at `localhost:3001/api`
 
 ## Build Appplication
 

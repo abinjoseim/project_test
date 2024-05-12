@@ -25,4 +25,4 @@ Note: Frontend application is communicating with backend executing in your local
 
 <br />
 
-Answers for all task 1, 2 and other additional details of task 3 is available in `Notes.md` file
+Answers for task 1, 2 and other additional details of task 3 is available in `Notes.md` file

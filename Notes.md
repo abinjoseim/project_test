@@ -50,6 +50,12 @@ Users have the capability to create bookings via a pop-up modal featuring dropdo
 
 `skeleton` and `spinner` are reusable components which can used in all modules.
 
+<br />
+
+- `http.interceptor.ts` - interceptor service to intercept all api calls made in this application. It can be used to add token, headers that are related to api. It can also include any logic that needs to done before and after api call is made.
+- `http.service.ts` - service where http methods are defined.
+- `error-handler.service.ts` - service used to process errors occurs is application.
+- `response-handler.service.ts` - service used to translate response from api
     
            
 

@@ -21,7 +21,7 @@
 - Consider providing actions like ON UPDATE and ON DELETE clauses for foreign keys to maintain data integrity.
 - Consider using correct data type for fields.For example, comments field in booking table can hold long comments, so we can USE TEXT data type.
 - Incorporating a DEFAULT value constraint can ensure that non-null fields have a predetermined default value assigned to them.
-- Postgres supports point-in-time-recovery(PITR), which will help recover database in a spcific point of time before an issue happens. Configure this to handle database recovery.
+- Postgres supports point-in-time-recovery (PITR), which will help recover database in a specific point of time before an issue happens. Configure this to handle database recovery.
 - Try using various tools to monitor database activities like performance, resource utilisation and backup status.
 
   
@@ -30,6 +30,42 @@
 <br />
 
 ## Task 2
+
+As a Frontend Developer, I design and develop responsive, mobile-first, user-friendly interfaces for diverse projects such as SaaS platforms, ecommerce websites, and managed service products. My tasks include creating mockups and prototypes, adhering to best practices and coding standards during implementation. I collaborate with UX designers to enhance user experience based on feedback and maintain consistant communication with backend engineers to ensure smooth data flow. Additionally, I mentor junior developer, document frontend code and actively participate in requirement gathering and project planning with product owners and stakeholders to ensure successful project delivery.
+
+<br />
+
+My expertise lies in TypeScript, JavaScript, Tailwind and in frameworks like Angular and React. Here is some of my latest practices using these technologies to enhance user experience and improve performance:
+
+- Microfrontend Architecture
+  - This architecture facilitate the decomposition of the entire user interface into smaller, more manageable modules, promoting scalability and facilitating cross-application integration. I have implemented this architecture using React to seamlessly integrate a builder tool(tool used to build adverts) into our main SaaS platform. Additionally, I have developed UI for two managed service platforms for analytics and campaign creation using React and Angular frameworks.
+
+- Component based Architecture
+  - Utilizing React and Angular, I've identified reusable components and structured them to seamlessly integrate across multiple modules, enhancing efficiency and minimizing code redundancy. For instance, components like buttons, cards, spinners, and pagers can be employed across various sections of the application.
+ 
+- Responsive web design
+  - By using frameworks like Tailwind and Bootstrap I make sure users have a seamless experience across various devices and screen sizes.
+
+- Performance Optimisation
+  - Have implemented lazy loading, assets optimisation and enable caching to reduce lod time and improve performance. Made use of bundler like Webpack to support code splitting to load multiple bundles dynamically to improve performance.
+
+- State management
+  - Have implemented state management using Redux with React/Angular in large application to manage state of different complex user journeys such as Advertisement campaign creation and Advert building.
+
+- Test Driven Development
+  - Employing Test Driven Development (TDD), I constructed a managed service product in React. This involved identifying components, writing tests for their intended functionality, developing the components, running tests, and refining until they passed the test cases. For instance, I implemented a form component that submits data upon clicking the submit button.
+ 
+- CI/CD
+  - Implemented pipelines for building, testing and deploying application frontend using tools like GitLab CI/CD Actions.
+
+- Best practices and coding standards
+  - Make use of semantic HTML, Accessibility checks by following WCAG standards, consistent formatting, and naming convention etc. Ensure application is cross browser compactable and use version control tool like Git. And finally write documentation for easier understanding by other developers who work on it.
+
+<br />
+
+Furthermore, I possess proficiency in Node.js and databases such as MySQL and SQLite, as the projects I've engaged with utilized Node.js for their backend. In previous roles, I contributed to the development of REST APIs in Node.js for feature modules, encompassing CRUD operations to oversee products on an ecommerce platform.
+
+In my daily workflow, I utilize tools like Figma to craft prototype screens for my projects, particularly within various microfrontend contexts. These created screens are then shared with the design team for review and approval.
 
 
 <br />
@@ -79,7 +115,7 @@ Tailwind CSS is utilized for styling and ensuring responsiveness within the appl
 
 <br />  
 
-Application will retry api call one more time, if it fail with `500, 502` status codes (`http.interceptor.ts`). If it fails again after retry an error notification message will shown to user and it's corresponding data table will be empty.
+Application will retry api call one more time, if it fail with `500, 502` status codes (`http.interceptor.ts`). If it fails again after retrying an error notification message will be shown to user and it's corresponding data table will be empty.
 
 <br />
 
@@ -91,7 +127,7 @@ Users have the capability to create bookings via a pop-up modal featuring dropdo
 
 <br />
 
-- `http.interceptor.ts` - interceptor service to intercept all api calls made in this application. It can be used to add token, headers that are related to api. It can also include any logic that needs to done before and after api call is made.
+- `http.interceptor.ts` - interceptor service to intercept all api calls made in this application. It can be used to add token, headers that are related to api. It can also include any logic that needs to do before and after api call is made.
 - `http.service.ts` - service where http methods are defined.
 - `error-handler.service.ts` - service used to process errors occurs is application.
 - `response-handler.service.ts` - service used to translate response from api

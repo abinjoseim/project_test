@@ -33,7 +33,7 @@
 
 ## Task 2
 
-As a Frontend Developer, I design and develop responsive, mobile-first, user-friendly interfaces for diverse projects such as SaaS platforms, ecommerce websites, and managed service products. My tasks include creating mockups and prototypes, adhering to best practices and coding standards during implementation. I collaborate with UX designers to enhance user experience based on feedback and maintain consistant communication with backend engineers to ensure smooth data flow. Additionally, I mentor junior developer, document frontend code and actively participate in requirement gathering and project planning with product owners and stakeholders to ensure successful project delivery.
+As a Frontend Developer, I design and develop responsive, mobile-first, user-friendly interfaces for diverse projects such as SaaS platforms, ecommerce websites, and managed service products. My tasks include creating mockups and prototypes, adhering to best practices and coding standards during implementation. I collaborate with UX designers to enhance user experience based on feedback and maintain consistent communication with backend engineers to ensure smooth data flow. Additionally, I mentor junior developer, document frontend code and actively participate in requirement gathering and project planning with product owners and stakeholders to ensure successful project delivery.
 
 <br />
 
@@ -49,7 +49,7 @@ My expertise lies in TypeScript, JavaScript, Tailwind and in frameworks like Ang
   - By using frameworks like Tailwind and Bootstrap I make sure users have a seamless experience across various devices and screen sizes.
 
 - Performance Optimisation
-  - Have implemented lazy loading, assets optimisation and enable caching to reduce lod time and improve performance. Made use of bundler like Webpack to support code splitting to load multiple bundles dynamically to improve performance.
+  - Have implemented lazy loading, assets optimisation and enable caching to reduce load time and improve performance. Made use of bundler like Webpack to support code splitting to load multiple bundles dynamically to improve performance.
 
 - State management
   - Have implemented state management using Redux with React/Angular in large application to manage state of different complex user journeys such as Advertisement campaign creation and Advert building.
